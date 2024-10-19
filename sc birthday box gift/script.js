@@ -1,1 +1,0 @@
-// click on the box cover to open the present.
