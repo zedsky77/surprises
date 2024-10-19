@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SURPRISE FOR MY COMELLLL</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Tambahkan CDN SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="birthday-gift">
+  <div class="gift">
+    <input id='click' type='checkbox'>
+    <label class='click' for='click'></label>
+    <div class="wishes">playlist for u!</div>
+    <div class="sparkles">
+      <div class="spark1"></div>
+      <div class="spark2"></div>
+      <div class="spark3"></div>
+      <div class="spark4"></div>
+      <div class="spark5"></div>
+      <div class="spark6"></div>
+    </div>
+  </div>
+  <div class="center-text">
+    <p>di buka tutup kadonya!</p>
+    <p>kalo udah klik tombol ini</p>
+    <button>
+      <a href="https://open.spotify.com/playlist/2QdywOmlTXglDJgvqJqKzF?si=17f3076d2df747d4" target="_blank">go to playlist</a>
+    </button> 
+    <button onclick="showAlert()">klik ini dlu</button>  
+  </div>
+
+  <script>
+    function showAlert() {
+      // SweetAlert2 kustom yang menggantikan yang pertama
+      Swal.fire({
+        title: "This playlist is from Mas Rioo🐻 , made specially for Siscaa only💐🌷",
+        width: 600,
+        padding: "3em",
+        color: "#716add",
+        background: "#fff url(/images/trees.png)",
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://media.tenor.com/rI_0O_9AJ5sAAAAj/nyan-cat-poptart-cat.gif")
+          left top
+          no-repeat
+        `,
+        confirmButtonText: 'Next'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // SweetAlert2 kedua setelah konfirmasi
+          Swal.fire({
+            title: 'Enjoy!',
+            text: 'Semoga sisca sukaa ><',
+            icon: 'success',
+            confirmButtonText: 'Thank you!'
+          });
+        }
+      });
+    }
+  </script>
+
+<!-- partial -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
